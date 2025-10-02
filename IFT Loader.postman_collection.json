@@ -1,0 +1,68 @@
+{
+	"info": {
+		"_postman_id": "6b74a279-abd3-416d-8d01-0a866cf58090",
+		"name": "IFT Loader",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24172608"
+	},
+	"item": [
+		{
+			"name": "Upload csv",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/NAltamirano/Downloads/pnn_Publico_17_09_2025/pnn_Publico_17_09_2025.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:4550/pnn/upload-csv",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4550",
+					"path": [
+						"pnn",
+						"upload-csv"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"usuario\",\r\n    \"password\":\"contraseña\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4550/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4550",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

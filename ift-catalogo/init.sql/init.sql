@@ -1,0 +1,47 @@
+-- --------------------------------------------------------
+-- Host:                         192.168.200.20
+-- Versión del servidor:         5.5.65-MariaDB - MariaDB Server
+-- SO del servidor:              Linux
+-- HeidiSQL Versión:             12.11.0.7065
+-- --------------------------------------------------------
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET NAMES utf8 */;
+/*!50503 SET NAMES utf8mb4 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+-- Volcando estructura para tabla tarificador.IFT_CATALOGO
+CREATE TABLE IF NOT EXISTS `IFT_CATALOGO` (
+  `CLAVE_CENSAL` varchar(50) DEFAULT NULL,
+  `POBLACION` varchar(100) DEFAULT NULL,
+  `MUNICIPIO` varchar(100) DEFAULT NULL,
+  `ESTADO` varchar(50) DEFAULT NULL,
+  `PRESUSCRIPCION` varchar(50) DEFAULT NULL,
+  `REGION` varchar(50) DEFAULT NULL,
+  `ASL` varchar(50) DEFAULT NULL,
+  `NIR` varchar(50) DEFAULT NULL,
+  `SERIE` varchar(50) DEFAULT NULL,
+  `NUMERACION_INICIAL` varchar(20) DEFAULT NULL,
+  `NUMERACION_FINAL` varchar(20) DEFAULT NULL,
+  `OCUPACION` varchar(50) DEFAULT NULL,
+  `TIPO_RED` varchar(50) DEFAULT NULL,
+  `MODALIDAD` varchar(50) DEFAULT NULL,
+  `RAZON_SOCIAL` varchar(150) DEFAULT NULL,
+  `FECHA_ASIGNACION` date DEFAULT NULL,
+  `FECHA_CONSOLIDACION` date DEFAULT NULL,
+  `FECHA_MIGRACION` date DEFAULT NULL,
+  `NIR_ANTERIOR` varchar(50) DEFAULT NULL,
+  `NIR_SERIE` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- La exportación de datos fue deseleccionada.
+
+/*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
+/*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
+/*!40014 SET FOREIGN_KEY_CHECKS=IFNULL(@OLD_FOREIGN_KEY_CHECKS, 1) */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40111 SET SQL_NOTES=IFNULL(@OLD_SQL_NOTES, 1) */;
