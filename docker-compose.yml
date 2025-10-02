@@ -1,0 +1,21 @@
+services:
+  ift-uploader:
+    image: openjdk:21-jdk
+    container_name: ift-uploader
+    working_dir: /app
+    volumes:
+      - ./ift-loader-1.0.0.jar:/app/ift-loader.jar
+    command: ["java", "-jar", "ift-loader.jar"]
+    env_file:
+      - .env
+    environment:
+      - server.port=${PORT}
+      - spring.datasource.url=jdbc:mariadb://${DATABASE_IP}:${DATABASE_PORT}/${DATABASE_NAME}
+      - spring.datasource.username=${DATABASE_USER}
+      - spring.datasource.password=${DATABASE_PASSWORD}
+      - spring.datasource.driver-class-name=org.mariadb.jdbc.Driver
+      - spring.jpa.hibernate.naming.physical-strategy=org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      - spring.servlet.multipart.max-file-size=20MB
+      - spring.servlet.multipart.max-request-size=20MB
+    ports:
+      - "${PORT}:8080"
